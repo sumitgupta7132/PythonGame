@@ -50,8 +50,8 @@ def welcome():
     exit_game = False
     while not exit_game:
         clock.tick(10)
-        # pygame.mixer.music.load('hiss.mp3')
-        # pygame.mixer.music.play()
+        pygame.mixer.music.load('hiss.mp3')
+        pygame.mixer.music.play()
 
         gameWindow.fill(white)
         gameWindow.blit(bgimg0, (0, 0))
@@ -63,8 +63,8 @@ def welcome():
                 exit_game = True
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_SPACE:
-                    # pygame.mixer.music.load('back2.mp3')
-                    # pygame.mixer.music.play()
+                    pygame.mixer.music.load('back2.mp3')
+                    pygame.mixer.music.play()
                     gameloop()
 
         pygame.display.update()
@@ -168,14 +168,14 @@ def gameloop():
             if head in snk_list[:-1]:
                 game_over = True
 
-                # pygame.mixer.music.load('gameover.mp3')
-                # pygame.mixer.music.play()
+                pygame.mixer.music.load('gameover.mp3')
+                pygame.mixer.music.play()
 
             if snake_x < 0 or snake_x > screen_width or snake_y < 0 or snake_y > screen_height:
                 game_over = True
 
-                # pygame.mixer.music.load('gameover.mp3')
-                # pygame.mixer.music.play()
+                pygame.mixer.music.load('gameover.mp3')
+                pygame.mixer.music.play()
             plot_snake(gameWindow, black, snk_list, snake_size)
         pygame.display.update()
         clock.tick(fps)
